@@ -1,0 +1,54 @@
+
+.slider_wrapper {
+    overflow: hidden;
+    .slide_scroller{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+    .prev-btn {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        width: 40px;
+        height: 40px;
+        transform: translate(0, -40px);
+        z-index: 200;
+        background: url('../../../images/prevBtn.svg') no-repeat;
+        background-size: 100%;
+    }
+
+    .next-btn {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        width: 40px;
+        height: 40px;
+        transform: translate(0, -40px);
+        background: url('../../../images/nextBtn.svg') no-repeat;
+        background-size: 100%;
+    }
+
+    .slider-pagination {
+        position: absolute;
+        bottom: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+
+        span {
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            border-radius: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            margin-right: 5px;
+        }
+        span.active {
+            background: rgba(0, 0, 0, 0.4);
+        }
+    }
+}
+.slider_wrapper.android {
+    padding-bottom: 20px;
+}
